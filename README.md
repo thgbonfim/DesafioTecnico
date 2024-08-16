@@ -1,5 +1,5 @@
-Testes de ponta a ponta com Cypress
-Projeto de exemplo para demonstrar testes de ponta a ponta (e2e) escritos com Cypress em execução no GitHub Actions.
+Testes Desafio Tecnico com Cypress
+Projeto de exemplo para demonstrar conhecimento escritos com Cypress em execução no GitHub Actions.
 
 Pré-requisitos
 Para clonar e executar este projeto, você precisará:
