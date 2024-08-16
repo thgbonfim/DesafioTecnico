@@ -1,34 +1,75 @@
-Testes Desafio Tecnico com Cypress
-Projeto de exemplo para demonstrar conhecimento escritos com Cypress em execução no GitHub Actions.
+# Automação de Testes com Cypress e Page Object
 
-Pré-requisitos
-Para clonar e executar este projeto, você precisará:
+## Descrição
 
-git (usei a versão 2.34.1ao escrever este documento)
-Node.js (usei a versão v18.15.0enquanto escrevia este documento)
-npm (usei a versão 9.5.0ao escrever este documento)
-Observação: ao instalar o Node.js, o npm é instalado automaticamente. 🚀
+Este projeto demonstra a criação de uma automação de testes para um formulário web usando Cypress e o padrão Page Object. A automação é estruturada seguindo boas práticas de organização de código e encapsulamento, visando garantir uma manutenção eficiente e a qualidade dos testes.
 
-Instalação
-Para instalar as dependências de desenvolvimento, execute npm install(ou npm ipara abreviar.)
+## Estrutura do Projeto
 
-Configurando as variáveis ​​de ambiente
-Antes de executar os testes, algumas variáveis ​​de ambiente precisam ser configuradas.
+- **`cypress/e2e`**: Contém os arquivos de especificações de teste que descrevem os cenários de teste.
+- **`cypress/e2e/step_definitions`**: Contém os arquivos onde são definidos os passos dos testes, implementando a lógica necessária para os cenários descritos.
+- **`cypress/pages`**: Contém as classes que representam as páginas do site e métodos para interagir com os elementos dessas páginas.
+- **`cypress/support`**: Contém arquivos de suporte e comandos personalizados que podem ser usados em toda a automação.
 
-Faça uma cópia do cypress.env.example.jsonarquivo como cypress.env.jsone defina os valores apropriados para todas as variáveis.
+## Requisitos
 
-Observação: o cypress.env.jsonarquivo não é rastreado pelo git, pois está listado no .gitignorearquivo.
+Para rodar este projeto, você precisará das seguintes ferramentas:
 
-Executando os testes
-Neste projeto, você pode executar testes nos modos interativo e headless, tanto em viewports de desktop quanto de tablet.
+- [Node.js](https://nodejs.org/) - Ambiente de execução JavaScript.
+- [Cypress](https://www.cypress.io/) - Ferramenta para execução dos testes.
 
-Modo sem cabeça
-Executar npm test(ou, npm tpara abreviar) executar todos os testes no modo headless usando uma viewport de desktop.
+## Passo a Passo da Automação
 
-Execute npm run test:tabletpara executar os testes apropriados no modo headless usando uma viewport de tablet.
+A automação realiza as seguintes etapas no site [http://sampleapp.tricentis.com/101/app.php](http://sampleapp.tricentis.com/101/app.php):
 
-Modo interativo
-Execute npm run cy:openpara abrir o aplicativo Cypress para executar testes no modo interativo usando uma janela de visualização de desktop.
+1. **Entrar no site**
 
-Execute npm run cy:open:tabletpara abrir o aplicativo Cypress para executar testes no modo interativo usando uma janela de visualização do tablet.
+   Navegue até a URL especificada.
+
+2. **Preencher o formulário - Aba "Enter Vehicle Data"**
+
+   Complete os campos do formulário na aba "Enter Vehicle Data" e avance para a próxima aba.
+
+3. **Preencher o formulário - Aba "Enter Insurant Data"**
+
+   Complete os campos do formulário na aba "Enter Insurant Data" e avance para a próxima aba.
+
+4. **Preencher o formulário - Aba "Enter Product Data"**
+
+   Complete os campos do formulário na aba "Enter Product Data" e avance para a próxima aba.
+
+5. **Preencher o formulário - Aba "Select Price Option"**
+
+   Complete os campos do formulário na aba "Select Price Option" e avance para a próxima aba.
+
+6. **Preencher o formulário - Aba "Send Quote"**
+
+   Complete os campos do formulário na aba "Send Quote" e envie o formulário.
+
+7. **Verificar mensagem de sucesso**
+
+   Verifique se a mensagem "Sending e-mail success!" aparece na tela para confirmar que a automação foi bem-sucedida.
+
+## Estrutura do Código
+
+### Pages
+
+As classes de páginas estão localizadas em `cypress/pages/`. Elas representam as diferentes páginas do site e encapsulam a lógica para interagir com os elementos dessas páginas.
+
+### Step Definitions
+
+Os arquivos de definições de passos estão localizados em `cypress/e2e/step_definitions/`. Eles contêm a implementação da lógica dos passos descritos nos cenários de teste. Esses arquivos traduzem as etapas descritas nas especificações para ações concretas no navegador.
+
+### Integration
+
+Os arquivos de especificações de teste estão localizados em `cypress/e2e/`. Eles descrevem os cenários de teste e utilizam as classes de páginas e definições de passos para realizar as ações necessárias e validar os resultados.
+
+## Configuração do Ambiente
+
+1. **Instale as dependências**
+
+   Execute o comando para instalar todas as dependências necessárias:
+
+   ```bash
+   npm install
 
