@@ -16,6 +16,9 @@ Para clonar e executar este projeto:
 - [git](https://git-scm.com/downloads) (Versão `2.34.1`)
 - [Node.js](https://nodejs.org/en/) (Versão `v18.15.0`)
 - npm (Versão `9.5.0`)
+- [Cypress Cucumber Preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor) - Plugin para suporte ao formato Gherkin.
+- [ESLint](https://eslint.org/) - Ferramenta para análise de código JavaScript e aplicação de padrões de codificação.
+
 
 **Observação:** Ao instalar o Node.js, o npm é instalado automaticamente. 🚀
 
