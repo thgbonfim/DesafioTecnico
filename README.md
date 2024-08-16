@@ -1,8 +1,23 @@
+
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/M4deN/Testes-End-to-End-Cypress/ci.yml?label=Test%20Workflows&logo=Cypress&style=for-the-badge)
+
+
+
 # Automação de Testes com Cypress e Page Object
 
 ## Descrição
 
 Este projeto demonstra a criação de uma automação de testes para um formulário web usando Cypress e o padrão Page Object. A automação é estruturada seguindo boas práticas de organização de código e encapsulamento, visando garantir uma manutenção eficiente e a qualidade dos testes.
+
+## Pré requisitos
+
+Para clonar e executar este projeto:
+
+- [git](https://git-scm.com/downloads) (Versão `2.34.1`)
+- [Node.js](https://nodejs.org/en/) (Versão `v18.15.0`)
+- npm (Versão `9.5.0`)
+
+**Observação:** Ao instalar o Node.js, o npm é instalado automaticamente. 🚀
 
 ## Estrutura do Projeto
 
@@ -72,4 +87,14 @@ Os arquivos de especificações de teste estão localizados em `cypress/e2e/`. E
 
    ```bash
    npm install
+
+Projeto de exemplo para demonstrar testes end-to-end (e2e) escritos com [Cypress](https://cypress.io) em execução no GitHub Actions.
+
+#### signup.cy.js
+
+https://github.com/thgbonfim/Testes-End-to-End-Cypress/assets/43422425/22f85892-0999-47ac-ab5a-d3462ce6d65f
+
+___
+
+Made with by [Thiago.B Almeida](https://github.com/thgbonfim).
 
