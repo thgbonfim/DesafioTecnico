@@ -1,3 +1,5 @@
+import { faker } from '@faker-js/faker'
+
 class SendQuotePage {
   constructor() {
     // Seletores armazenados em variáveis para fácil manutenção
@@ -14,15 +16,21 @@ class SendQuotePage {
   }
 
   /**
-   * Preenche e envia o formulário
+   * Preenche e envia o formulário com dados fictícios gerados pelo faker
    */
   submitQuote() {
-    this.fillInput(this.selectors.email, 'user@example.com')
-    this.fillInput(this.selectors.phone, '1234567890')
-    this.fillInput(this.selectors.username, 'username123')
-    this.fillInput(this.selectors.password, 'P@ssw0rd125')
-    this.fillInput(this.selectors.confirmPassword, 'P@ssw0rd125')
-    this.fillInput(this.selectors.comments, 'isto e um teste para o comentario.')
+    const email = faker.internet.email()
+    const phone = faker.phone.number('##########')
+    const username = faker.internet.userName()
+    const password = faker.internet.password()
+    const comments = faker.lorem.sentence()
+
+    this.fillInput(this.selectors.email, email)
+    this.fillInput(this.selectors.phone, phone)
+    this.fillInput(this.selectors.username, username)
+    this.fillInput(this.selectors.password, password)
+    this.fillInput(this.selectors.confirmPassword, password) // Confirmar com a mesma senha
+    this.fillInput(this.selectors.comments, comments)
 
     this.clickButton(this.selectors.sendEmailButton)
   }
@@ -31,11 +39,10 @@ class SendQuotePage {
    * Verifica se a mensagem de sucesso está visível
    */
   verifySuccessMessage() {
-    // Verifica se o elemento com a mensagem de sucesso está visível e tem o texto correto
-    cy.contains(this.selectors.successMessage)
+    cy.contains(this.selectors.successMessage, { timeout: 10000 })
       .should('be.visible')
-      .invoke('text') // Obtém o texto do elemento
-      .should('equal', this.selectors.successMessage) // Compara o texto com o valor esperado
+      .invoke('text')
+      .should('equal', this.selectors.successMessage)
   }
 
   /**
@@ -45,9 +52,12 @@ class SendQuotePage {
    */
   fillInput(selector, text) {
     cy.get(selector)
-      .should('be.visible') // Garante que o campo está visível
-      .clear()              // Limpa o campo antes de digitar
-      .type(text)          // Digita o texto
+      .should('be.visible')
+      .then(($input) => {
+        cy.wrap($input)
+          .clear()
+          .type(text)
+      })
   }
 
   /**
@@ -56,9 +66,9 @@ class SendQuotePage {
    */
   clickButton(selector) {
     cy.get(selector)
-      .should('be.visible') // Garante que o botão está visível
-      .and('not.be.disabled') // Garante que o botão não está desabilitado
-      .click()              // Clica no botão
+      .should('be.visible')
+      .and('not.be.disabled')
+      .click()
   }
 }
 

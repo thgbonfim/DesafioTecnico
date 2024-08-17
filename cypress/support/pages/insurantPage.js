@@ -1,3 +1,4 @@
+import { faker } from '@faker-js/faker'
 class InsurantPage {
   constructor() {
     // Seletores armazenados em variáveis para fácil manutenção
@@ -19,8 +20,10 @@ class InsurantPage {
    * Preenche o formulário de segurado
    */
   fillForm() {
-    this.enterFirstName('John')
-    this.enterLastName('Doe')
+    const firstName = faker.name.firstName()
+    const lastName = faker.name.lastName()
+    this.enterFirstName(firstName)
+    this.enterLastName(lastName)
     this.enterDateOfBirth('01/02/1988')
     this.enterStreetAddress('123 Main St')
     this.selectCountry('United States')
