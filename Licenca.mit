@@ -1,0 +1,15 @@
+
+### Explicação das Seções
+
+- **Descrição**: Introduz o projeto e seu objetivo.
+- **Estrutura do Projeto**: Descreve a organização dos arquivos e pastas, incluindo os diretórios `cypress/e2e` e `cypress/e2e/step_definitions/`.
+- **Requisitos**: Lista as ferramentas necessárias para rodar o projeto.
+- **Passo a Passo da Automação**: Detalha as etapas que a automação deve seguir no site.
+- **Estrutura do Código**: Explica a organização das classes de páginas, definições de passos e especificações de teste.
+- **Exemplo de Especificação de Teste**: Mostra como os cenários de teste são descritos e como são implementados os passos.
+- **Configuração do Ambiente**: Fornece instruções para instalar dependências e executar testes.
+- **Boas Práticas**: Destaca as práticas recomendadas para o desenvolvimento e manutenção do código.
+- **Contribuições**: Orienta sobre como contribuir para o projeto.
+- **Licença**: Informa sobre a licença do projeto.
+
+Isso deve fornecer uma visão clara e detalhada de como o projeto está estruturado e como os testes são definidos e implementados.
