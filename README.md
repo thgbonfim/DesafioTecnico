@@ -18,6 +18,7 @@ Para clonar e executar este projeto:
 - npm (Versão `9.5.0`)
 - [Cypress Cucumber Preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor) - Plugin para suporte ao formato Gherkin.
 - [ESLint](https://eslint.org/) - Ferramenta para análise de código JavaScript e aplicação de padrões de codificação.
+- [Faker](https://fakerjs.dev/) - Biblioteca para geração de dados fictícios.
 
 
 **Observação:** Ao instalar o Node.js, o npm é instalado automaticamente. 🚀
