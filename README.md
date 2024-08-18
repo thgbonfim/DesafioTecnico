@@ -94,9 +94,7 @@ Os arquivos de especificações de teste estão localizados em `cypress/e2e/`. E
 
 Projeto de exemplo para demonstrar testes end-to-end (e2e) escritos com [Cypress](https://cypress.io) em execução no GitHub Actions.
 
-#### signup.cy.js
 
-https://github.com/thgbonfim/Testes-End-to-End-Cypress/assets/43422425/22f85892-0999-47ac-ab5a-d3462ce6d65f
 
 ___
 
